@@ -176,43 +176,59 @@
           </div>
         </div>
       </div>
+      </section>
+<!-- Modal Te Llevo App (Asegurando que ocupe toda la pantalla) -->
+<div id="modal-te-llevo" class="fixed inset-0 hidden bg-black bg-opacity-80 items-center justify-center z-50" style="position: fixed; left: 0; top: 0; width: 100vw; height: 100vh; margin: 0; padding: 0;">
+  <div class="bg-white w-full h-full flex flex-col" style="max-width: 100vw; max-height: 100vh;">
+    <!-- Botones de navegación y cierre -->
+    <div class="flex justify-between items-center p-4 border-b">
+      <h3 class="text-3xl font-bold text-blue-600">Te Llevo App</h3>
+      <button onclick="closeModal('modal-te-llevo')"
+        class="text-3xl font-bold text-gray-700 hover:text-gray-900 focus:outline-none p-2">
+        &times;
+      </button>
+    </div>
 
-      <!-- Modal Te Llevo App (Código actualizado) -->
-      <div id="modal-te-llevo" class="fixed inset-0 hidden bg-black bg-opacity-50 items-center justify-center z-40">
-        <div class="bg-white rounded-lg overflow-hidden max-w-3xl w-full mx-4 relative">
-          <!-- Botón de cierre en la esquina superior derecha -->
-          <button onclick="closeModal('modal-te-llevo')"
-            class="absolute top-2 right-2 text-2xl font-bold text-gray-700 hover:text-gray-900 focus:outline-none"
-            style="z-index: 100;">
-            &times;
-          </button>
-
-          <div class="p-6">
-            <h3 class="text-2xl font-bold mb-4">Te Llevo App</h3>
-            <p class="text-gray-700 mb-4">
-              App móvil para gestionar rutas de transporte compartido, con login, mapas y chat en tiempo real.
-              Tecnologías: Ionic, Angular, Firebase, WeatherAPI.
-            </p>
-            <div id="carousel-te-llevo" class="relative">
-              <img src="assets/images/TeLlevoApp/LoginTeLlevoApp.jpeg" alt="Captura Te Llevo App"
-                class="w-full h-64 object-cover rounded-lg">
-              <button id="prev-te-llevo"
-                class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-75 hover:bg-opacity-100 rounded-full p-2">‹</button>
-              <button id="next-te-llevo"
-                class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-75 hover:bg-opacity-100 rounded-full p-2">›</button>
-            </div>
-
-            <!-- Botón de cierre grande y más visible al final -->
-            <div class="flex justify-center mt-6">
-              <button id="close-te-llevo" onclick="closeModal('modal-te-llevo')"
-                class="px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 text-lg">
-                Cerrar
-              </button>
-            </div>
-          </div>
+    <!-- Contenido principal: dividido en descripción e imagen -->
+    <div class="flex flex-col md:flex-row flex-1 p-4 gap-6 overflow-auto">
+      <!-- Sección de descripción -->
+      <div class="md:w-1/4">
+        <p class="text-gray-700 mb-6 text-lg">
+          App móvil para gestionar rutas de transporte compartido, con login, mapas y chat en tiempo real.
+          Tecnologías: Ionic, Angular, Firebase, WeatherAPI.
+        </p>
+        <div class="flex gap-4">
+          <button class="px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Demo</button>
+          <button class="px-6 py-2 border border-blue-600 text-blue-600 rounded hover:bg-blue-50">Repositorio</button>
         </div>
       </div>
+      
+      <!-- Sección del carrusel -->
+      <div class="md:w-3/4 flex-1 flex items-center justify-center">
+        <div id="carousel-te-llevo" class="relative w-full h-full flex items-center justify-center" style="min-height: 60vh;">
+          <img src="assets/images/TeLlevoApp/LoginTeLlevoApp.jpeg" alt="Captura Te Llevo App"
+            class="h-auto max-w-full object-contain mx-auto" style="max-height: 80vh;">
+          <button id="prev-te-llevo"
+            class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-75 hover:bg-opacity-100 rounded-full p-4 text-3xl shadow-lg z-10">
+            ‹
+          </button>
+          <button id="next-te-llevo"
+            class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-75 hover:bg-opacity-100 rounded-full p-4 text-3xl shadow-lg z-10">
+            ›
+          </button>
+        </div>
+      </div>
+    </div>
 
+    <!-- Botón de cierre en la parte inferior -->
+    <div class="p-4 border-t flex justify-center">
+      <button id="close-te-llevo" onclick="closeModal('modal-te-llevo')"
+        class="px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 text-lg">
+        Cerrar
+      </button>
+    </div>
+  </div>
+</div>
       <!-- Contacto -->
       <section id="contacto" class="py-12 animate-fadeIn">
         <div class="max-w-4xl mx-auto px-6 text-center">

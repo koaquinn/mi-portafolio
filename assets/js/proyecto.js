@@ -20,7 +20,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // Imágenes del carrusel de Te Llevo App
     const teLlevoImages = [
       'assets/images/TeLlevoApp/LoginTeLlevoApp.jpeg',
-      // Agrega aquí más URLs de imágenes si las tienes
+      'assets/images/TeLlevoApp/InicioTeLlevoApp.jpeg',
+      'assets/images/TeLlevoApp/RegistroTeLlevoApp.jpeg',
+      'assets/images/TeLlevoApp/CrearViajeTeLlevoApp.jpeg',
+      'assets/images/TeLlevoApp/BuscarViajeTeLlevoApp.jpeg',
     ];
     let currentImageIndex = 0;
   
