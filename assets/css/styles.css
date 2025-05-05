@@ -1,0 +1,143 @@
+/* Estilos generales */
+.retro-bg {
+  background-color: #f0f4f8;
+}
+
+/* Secciones y títulos */
+.section-title {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #3b82f6;
+  border-radius: 2px;
+}
+
+/* Tarjetas y elementos con sombra */
+.sombreado {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sombreado:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Categorías de tecnologías */
+.tech-category {
+  margin-bottom: 2rem;
+}
+
+.category-title {
+  border-left: 4px solid #3b82f6;
+  padding-left: 10px;
+}
+
+/* Tarjetas de tecnologías */
+.tech-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #f8fafc;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+
+.tech-card:hover {
+  transform: scale(1.05);
+  background-color: #f0f7ff;
+}
+
+/* Proyectos */
+.project-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* Estilos para modales */
+[id^="modal-"] {
+  z-index: 50;
+}
+
+[id^="modal-"] > div {
+  max-width: 800px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+#carousel-te-llevo {
+  width: 100%;
+  overflow: hidden;
+}
+
+#carousel-te-llevo img {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: contain;
+}
+
+/* Botones de navegación del carrusel */
+#prev-te-llevo, #next-te-llevo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #333;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Lightbox de imágenes */
+#lightbox img {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+}
+
+/* Responsive para móviles */
+@media (max-width: 640px) {
+  [id^="modal-"] > div {
+    width: 95%;
+    max-height: 80vh;
+  }
+  
+  #carousel-te-llevo img {
+    max-height: 300px;
+  }
+}
